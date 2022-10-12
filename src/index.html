@@ -10,24 +10,119 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.png" />
     <link rel="stylesheet" href="css/styles.css" />
     <script src="js/app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/797e057ed0.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
-  <body class="font-serif text-gray-700">
+  <body class="font-serif text-blue-900">
     <div class="flex justify-center">
-      <div class="container bg-blue-200 text-center p-5 m-5 rounded-lg">
-        <h1 class="mb-5 text-5xl">Quadro Kanban</h1>
-        <hr />
-        <button class="my-5 p-2 text-3xl inline rounded-full bg-blue-400 text-white">Nova tarefa + </button>
-        <hr />
-        <div class="grid grid-cols-3">
-          <div id="ToDo">
-            
+      <div class="container p-5 flex flex-col items-center">
+        <div class="container bg-blue-200 text-center p-5 m-5 rounded-lg">
+          <h1 class="mb-5 text-5xl">Quadro Kanban</h1>
+          <hr />
+          <button
+            id="new-task"
+            class="my-5 p-2 text-3xl inline rounded-full bg-blue-400 text-white"
+          >
+            Nova tarefa +
+          </button>
+          <hr />
+          <div class="absolute inset-x-0 top-12 hidden">
+            <div class="w-full flex content-center justify-center">
+              <div class="bg-blue-100 rounded-lg">
+                <form action="#" class="p-3">
+                  <div class="px-3 mb-6">
+                    <div class="m-5">
+                      <span class="text-4xl">Nova tarefa</span>
+                    </div>
+                    <label
+                      class="block text-xs font-bold mb-2 text-left"
+                      for="grid-first-name"
+                    >
+                      RESPONSÁVEL
+                    </label>
+                    <input
+                      class="appearance-none block w-full border border-blue-500 rounded py-3 px-4 mb-1 focus:outline-none"
+                      id="grid-first-name"
+                      type="text"
+                      placeholder="João"
+                    />
+                    <p class="text-red-500 text-xs italic text-left">
+                      Por favor preencha este campo.
+                    </p>
+                  </div>
+                  <div class="px-3 mb-6">
+                    <label
+                      class="block text-xs font-bold mb-2 text-left"
+                      for="grid-task"
+                    >
+                      TAREFA
+                    </label>
+                    <textarea
+                      id="grid-task"
+                      rows="4"
+                      class="block mb-1 p-2.5 w-full rounded-lg border border-blue-500"
+                      placeholder="Aprender a voar."
+                    ></textarea>
+                    <p class="text-red-500 text-xs italic text-left">
+                      Por favor preencha este campo.
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-          <div id="Doing">
-
-          </div>
-          <div id="Done">
-
+        </div>
+        <div class="container bg-blue-300 text-center m-5 rounded-lg">
+          <div class="md:grid md:grid-cols-3 sm:flex sm:flex-col">
+            <div id="to-do">
+              <div class="bg-white mx-2 rounded-lg">
+                <p class="my-2">A FAZER</p>
+              </div>
+              <div>
+                <div class="mx-2 bg-blue-200">
+                  <div class="flex justify-between">
+                    <div class="mx-2">
+                      <span>1</span>
+                      <span>Marcos</span>
+                    </div>
+                    <div class="mx-2">
+                      <i class="fa-solid fa-arrow-left"></i>
+                      <span class="mx-2"
+                        ><i class="fa-solid fa-arrow-right"></i
+                      ></span>
+                      <span class="text-red-300"
+                        ><i class="fa-solid fa-square-xmark"></i
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mx-2 bg-white text-left">
+                  <div class="mx-2 mb-2">
+                    <span
+                      >Tarefa 1 Tarefa 1 Tarefa 1 Tarefa 1 Tarefa 1 Tarefa 1
+                      Tarefa 1 Tarefa 1 Tarefa 1 Tarefa 1 Tarefa 1 Tarefa 1
+                      Tarefa 1 Tarefa 1 Tarefa 1 Tarefa 1 Tarefa 1 Tarefa 1
+                      Tarefa 1 Tarefa 1 Tarefa 1 Tarefa 1 Tarefa 1 Tarefa 1
+                      Tarefa 1 Tarefa 1 Tarefa 1 Tarefa 1 Tarefa 1 Tarefa 1
+                      Tarefa 1 Tarefa 1 Tarefa 1
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="doing">
+              <div class="bg-white mx-2 rounded-lg">
+                <p class="my-2">FAZENDO</p>
+              </div>
+            </div>
+            <div id="done">
+              <div class="bg-white mx-2 rounded-lg">
+                <p class="my-2">FEITO</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
