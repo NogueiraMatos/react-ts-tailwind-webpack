@@ -1,3 +1,4 @@
+[EM CONSTRUÇÃO]
 Primeiro contato com React, Typescript, Tailwind e Webpack.
 A ideia aqui é fazer por partes. Montar a página primeiro somente com HTML, Tailwind e Javascript e depois refatorar utilizando o typescript, react e webpack.
 
